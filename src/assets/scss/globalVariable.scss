@@ -1,0 +1,48 @@
+//多行文本超过行数显示省略号，只适用于WebKit及移动端
+@mixin text-overflow($line: 2) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  .flex1{
+    flex: 1;
+  }
+}
+
+.flex-align-center {
+  @extend .flex;
+  align-items: center;
+}
+
+.flex-space {
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.flex-space-center {
+  @extend .flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center-center {
+  @extend .flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
